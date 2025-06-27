@@ -11,6 +11,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -22,6 +23,9 @@ import com.google.android.gms.location.Priority
 import com.test.weather.presentation.viewModel.MainViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 
 @SuppressLint("MissingPermission")
 internal fun requestSingleLocationUpdate(
@@ -93,6 +97,8 @@ internal fun RequestLocation(
     mainViewModel: MainViewModel,
     requestPermissionLauncher: ManagedActivityResultLauncher<Array<String>, Map<String, @JvmSuppressWildcards Boolean>>
 ) {
+    var locationAcquired:Boolean by rememberSaveable { mutableStateOf(false) }
+
     val context = LocalContext.current
     LaunchedEffect(Unit) {
         val hasFineLocation = ContextCompat.checkSelfPermission(
@@ -106,7 +112,10 @@ internal fun RequestLocation(
 
         if (hasFineLocation || hasCoarseLocation) {
             getCurrentLocation(context, fusedLocationClient) { lat, lon ->
-                mainViewModel.loadAddress(lat, lon)
+                if (!locationAcquired) {
+                    mainViewModel.loadAddress(lat, lon)
+                    locationAcquired = true
+                }
             }
         } else {
             // Request permissions if not granted
@@ -136,7 +145,6 @@ internal fun managedActivityResultLauncher(
                     permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
         if (locationPermissionGranted) {
             getCurrentLocation(context, fusedLocationClient) { lat, lon ->
-
                 mainViewModel.loadAddress(lat, lon)
             }
         } else {
