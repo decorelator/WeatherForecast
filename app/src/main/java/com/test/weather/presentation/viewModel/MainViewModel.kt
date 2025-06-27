@@ -67,7 +67,6 @@ class MainViewModel @Inject constructor(
         lat: Double,
         lon: Double,
     ) {
-        _weatherState.value = WeatherState.Loading
         viewModelScope.launch {
             fetchAddressUseCase(lat, lon)
         }
