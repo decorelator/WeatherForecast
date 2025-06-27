@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="weather_clear_sky">Clear Sky</string>
+    <string name="weather_mainly_clear">Mainly Clear</string>
+    <string name="weather_partly_cloudy">Partly Cloudy</string>
+    <string name="weather_overcast">Overcast</string>
+    <string name="weather_fog">Fog</string>
+    <string name="weather_rime_fog">Depositing Rime Fog</string>
+    <string name="weather_light_drizzle">Light Drizzle</string>
+    <string name="weather_moderate_drizzle">Moderate Drizzle</string>
+    <string name="weather_dense_drizzle">Dense Drizzle</string>
+    <string name="weather_light_freezing_drizzle">Light Freezing Drizzle</string>
+    <string name="weather_dense_freezing_drizzle">Dense Freezing Drizzle</string>
+    <string name="weather_light_rain">Light Rain</string>
+    <string name="weather_moderate_rain">Moderate Rain</string>
+    <string name="weather_heavy_rain">Heavy Rain</string>
+    <string name="weather_light_freezing_rain">Light Freezing Rain</string>
+    <string name="weather_heavy_freezing_rain">Heavy Freezing Rain</string>
+    <string name="weather_light_snow_fall">Light Snow Fall</string>
+    <string name="weather_moderate_snow_fall">Moderate Snow Fall</string>
+    <string name="weather_heavy_snow_fall">Heavy Snow Fall</string>
+    <string name="weather_snow_grains">Snow Grains</string>
+    <string name="weather_light_rain_showers">Light Rain Showers</string>
+    <string name="weather_moderate_rain_showers">Moderate Rain Showers</string>
+    <string name="weather_violent_rain_showers">Violent Rain Showers</string>
+    <string name="weather_light_snow_showers">Light Snow Showers</string>
+    <string name="weather_heavy_snow_showers">Heavy Snow Showers</string>
+    <string name="weather_thunderstorm">Thunderstorm</string>
+    <string name="weather_thunderstorm_light_hail">Thunderstorm With Light Hail</string>
+    <string name="weather_thunderstorm_heavy_hail">Thunderstorm With Heavy Hail</string>
+    <string name="weather_unknown_condition">Unknown Weather Condition</string>
+    <string name="light_freezing_rain">Light Freezing Rain</string>
+    <string name="heavy_freezing_rain">Heavy Freezing Rain</string>
+    <string name="forecast">Forecast</string>
+    <string name="condition">"condition: "</string>
+</resources>
