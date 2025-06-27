@@ -6,17 +6,7 @@
       <GradleProjectSettings>
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/forecastFeture" />
-            <option value="$PROJECT_DIR$/ui_global" />
-          </set>
-        </option>
+        <option name="gradleJvm" value="jbr-21" />
         <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
